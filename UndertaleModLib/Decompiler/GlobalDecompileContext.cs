@@ -37,6 +37,7 @@ public class GlobalDecompileContext : IGameContext
     public bool UsingRoomInstanceReferences => Data?.IsVersionAtLeast(2024, 2) ?? false;
     public bool UsingFunctionScriptReferences => Data?.IsVersionAtLeast(2024, 2) ?? false;
     public bool UsingNewFunctionResolution => Data?.IsVersionAtLeast(2024, 13) ?? false;
+    public bool UsingStructSpecialCaseNames => Data?.IsVersionAtLeast(2024, 13) ?? false;
     public bool UsingLogicalShortCircuit => Data?.ShortCircuit ?? true;
     public bool UsingLongCompoundBitwise => Data?.IsVersionAtLeast(2, 3, 2) ?? false;
     public bool UsingExtraRepeatInstruction => !(Data?.IsNonLTSVersionAtLeast(2022, 11) ?? false);
@@ -54,6 +55,7 @@ public class GlobalDecompileContext : IGameContext
     public bool UsingNewChainedFunctionArgumentOrder => Data?.IsVersionAtLeast(2024, 14, 4) ?? false;
     public bool UsingTemplateStrings => Data?.IsNonLTSVersionAtLeast(2023, 4) ?? false;
     public bool UsingModernTemplateStrings => Data?.IsVersionAtLeast(2024, 14) ?? false;
+    public bool UsingStructAnyNonemptyString => Data?.IsVersionAtLeast(2024, 14) ?? false;
     public GameSpecificRegistry GameSpecificRegistry => Data?.GameSpecificRegistry;
     public IBuiltins Builtins { get; private set; } = null;
     public ICodeBuilder CodeBuilder { get; private set; } = null;
