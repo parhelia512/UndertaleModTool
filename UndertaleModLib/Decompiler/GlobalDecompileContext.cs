@@ -45,6 +45,7 @@ public class GlobalDecompileContext : IGameContext
     public bool UsingReentrantStatic => !(Data?.IsVersionAtLeast(2024, 11) ?? false);
     public bool UsingNewFunctionVariables => Data?.IsVersionAtLeast(2024, 2) ?? false;
     public bool UsingSelfToBuiltin => Data?.IsVersionAtLeast(2024, 2) ?? false;
+    public bool UsingVariableHashFunctions => Data?.IsVersionAtLeast(2024, 2) ?? false;
     public bool UsingGlobalConstantFunction => Data?.IsVersionAtLeast(2023, 11) ?? false;
     public bool UsingObjectFunctionForesight => Data?.IsVersionAtLeast(2024, 11) ?? false;
     public bool UsingBetterTryBreakContinue => Data?.IsVersionAtLeast(2024, 11) ?? false;
